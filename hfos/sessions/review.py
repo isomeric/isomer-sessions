@@ -34,8 +34,8 @@ Review: Generic object to store data about lectures, lightning talks etc.
 
 """
 
-from hfos.schemata.defaultform import editbuttons, section, lookup_field, rating_widget
-from hfos.schemata.base import base_object, uuid_object
+from isomer.schemata.defaultform import editbuttons, section, lookup_field, rating_widget
+from isomer.schemata.base import base_object, uuid_object
 
 ReviewSchema = base_object('review', roles_create='chair', hide_owner=False)
 

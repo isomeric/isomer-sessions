@@ -17,7 +17,7 @@
 #
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-from hfos.misc import std_uuid, std_now
+from isomer.misc import std_uuid, std_now
 
 __author__ = "Heiko 'riot' Weinen"
 __license__ = "AGPLv3"
@@ -35,13 +35,13 @@ import os
 from time import time
 from dateutil import parser
 from datetime import timedelta
-from hfos.component import ConfigurableComponent, handler, authorizedevent
-from hfos.events.client import send
-from hfos.database import objectmodels
-from hfos.logger import error, warn, hilight, debug, verbose
+from isomer.component import ConfigurableComponent, handler, authorized_event
+from isomer.events.client import send
+from isomer.database import objectmodels
+from isomer.logger import error, warn, hilight, debug, verbose
 from circuits import Timer, Event
 
-from hfos.debugger import cli_register_event
+from isomer.debugger import cli_register_event
 
 
 # CLI events
@@ -51,11 +51,11 @@ class cli_test_Session(Event):
     pass
 
 
-class session_attach_file(authorizedevent):
+class session_attach_file(authorized_event):
     pass
 
 
-class session_confirm(authorizedevent):
+class session_confirm(authorized_event):
     roles = ['chair']
 
 
@@ -68,7 +68,7 @@ class SessionManager(ConfigurableComponent):
     """
 
     configprops = {}
-    channel = "hfosweb"
+    channel = 'isomer-web'
 
     def __init__(self, *args):
         super(SessionManager, self).__init__("SESSION", *args)

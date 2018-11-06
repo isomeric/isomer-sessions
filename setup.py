@@ -40,13 +40,13 @@ This software package is a plugin module for HFOS.
 """,
       dependency_links=[],
       install_requires=['hfos>=1.2.0'],
-      entry_points="""[hfos.components]
+      entry_points="""[isomer.components]
       sessionmanager=hfos.sessions.sessionmanager:SessionManager
-      [hfos.schemata]
+      [isomer.schemata]
     session=hfos.sessions.session:Session
     sessiontype=hfos.sessions.sessiontype:SessionType
     review=hfos.sessions.review:Review
-      [hfos.provisions]
+      [isomer.provisions]
     sessions=hfos.sessions.provisions.sessions_volume:provision
     """,
       test_suite="tests.main.main",

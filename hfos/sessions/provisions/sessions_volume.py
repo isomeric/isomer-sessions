@@ -36,7 +36,7 @@ Predefined volumes
 
 from os.path import join
 
-from hfos.database import objectmodels, instance
+from isomer.database import objectmodels, instance
 
 Volumes = [
     {

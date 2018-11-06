@@ -34,8 +34,8 @@ SessionType: Generic object to store data about lectures, lightning talks etc.
 
 """
 
-from hfos.schemata.defaultform import editbuttons, section
-from hfos.schemata.base import base_object
+from isomer.schemata.defaultform import editbuttons, section
+from isomer.schemata.base import base_object
 
 SessionTypeSchema = base_object('sessiontype',
                                 roles_write=['chair'],
