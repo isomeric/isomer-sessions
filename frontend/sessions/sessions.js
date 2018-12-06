@@ -3,7 +3,7 @@
  * # -*- coding: UTF-8 -*-
  *
  * __license__ = """
- * Hackerfleet Operating System
+ * Isomer Application Framework
  * ============================
  * Copyright (C) 2011- 2018 riot <riot@c-base.org> and others.
  *
@@ -150,7 +150,7 @@ class Sessions {
         let file = document.getElementById('upload_file').files[0];
         let self = this;
 
-        this.filemanagerservice.sendFile(file, 'hfos.sessions', session_uuid).then(function (result) {
+        this.filemanagerservice.sendFile(file, 'isomer.sessions', session_uuid).then(function (result) {
             console.log('[SESSIONS] Uploaded. Result:', result);
 
             if (result.success === true) {

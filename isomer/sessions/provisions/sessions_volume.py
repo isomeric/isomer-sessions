@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# HFOS - Hackerfleet Operating System
-# ===================================
+# Isomer Application Framework
+# ============================
 # Copyright (C) 2011-2018 Heiko 'riot' Weinen <riot@c-base.org> and others.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -40,10 +40,11 @@ from isomer.database import objectmodels, instance
 
 Volumes = [
     {
-        'name': 'hfos.sessions',
+        'name': 'isomer.sessions',
         'uuid': 'f47711bf-51d0-49ed-aacb-68783ce16a2b',
         'description': 'Session attachment storage',
-        'path': join('/var/lib/hfos/', instance, 'volumes/sessions'),
+        # TODO: Use i.m.path to get the right path
+        'path': join('/var/lib/isomer/', instance, 'volumes/sessions'),
         'flags': ['uservolume'],
         'perms': {
             'read': ['admin', 'chair'],

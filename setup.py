@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# HFOS - Hackerfleet Operating System
-# ===================================
+# Isomer Application Framework
+# ============================
 # Copyright (C) 2011-2018 Heiko 'riot' Weinen <riot@c-base.org> and others.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -23,31 +23,31 @@ __license__ = "AGPLv3"
 
 from setuptools import setup, find_packages
 
-setup(name="hfos-comms",
+setup(name="isomer-sessions",
       version="0.0.2",
-      description="hfos-comms",
-      author="Hackerfleet Community",
+      description="isomer-sessions",
+      author="Isomer Community",
       author_email="riot@c-base.org",
-      url="https://github.com/hackerfleet/hfos-comms",
+      url="https://github.com/isomeric/isomer-sessions",
       license="GNU Affero General Public License v3",
       packages=find_packages(),
-      long_description="""HFOS - Sessions
-===============
+      long_description="""Isomer - Sessions
+=================
 
 This package adds session objects for management of lectures, lightning talks etc
 
-This software package is a plugin module for HFOS.
+This software package is a plugin module for Isomer.
 """,
       dependency_links=[],
-      install_requires=['hfos>=1.2.0'],
+      install_requires=['isomer>=1.0.0'],
       entry_points="""[isomer.components]
-      sessionmanager=hfos.sessions.sessionmanager:SessionManager
+      sessionmanager=isomer.sessions.sessionmanager:SessionManager
       [isomer.schemata]
-    session=hfos.sessions.session:Session
-    sessiontype=hfos.sessions.sessiontype:SessionType
-    review=hfos.sessions.review:Review
+    session=isomer.sessions.session:Session
+    sessiontype=isomer.sessions.sessiontype:SessionType
+    review=isomer.sessions.review:Review
       [isomer.provisions]
-    sessions=hfos.sessions.provisions.sessions_volume:provision
+    sessions=isomer.sessions.provisions.sessions_volume:provision
     """,
       test_suite="tests.main.main",
       )

@@ -3,7 +3,7 @@
  * # -*- coding: UTF-8 -*-
  *
  * __license__ = """
- * Hackerfleet Operating System
+ * Isomer Application Framework
  * ============================
  * Copyright (C) 2011- 2018 riot <riot@c-base.org> and others.
  *
@@ -188,7 +188,7 @@ class Sessions {
             self.get_user_data();
         });
 
-        let managerHandler = this.socket.listen('hfos.session.sessionmanager', function (msg) {
+        let managerHandler = this.socket.listen('isomer.session.sessionmanager', function (msg) {
             console.log('[SESSIONS] Msg', msg);
             if (msg.action === 'session_confirm') {
                 self.get_events(true);
@@ -268,7 +268,7 @@ class Sessions {
                 return
             }
             let request = {
-                component: 'hfos.sessions.sessionmanager',
+                component: 'isomer.sessions.sessionmanager',
                 action: 'session_confirm',
                 data: {
                     time: this.time,
