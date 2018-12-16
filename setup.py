@@ -23,24 +23,25 @@ __license__ = "AGPLv3"
 
 from setuptools import setup, find_packages
 
-setup(name="isomer-sessions",
-      version="0.0.2",
-      description="isomer-sessions",
-      author="Isomer Community",
-      author_email="riot@c-base.org",
-      url="https://github.com/isomeric/isomer-sessions",
-      license="GNU Affero General Public License v3",
-      packages=find_packages(),
-      long_description="""Isomer - Sessions
+setup(
+    name="isomer-sessions",
+    version="0.0.2",
+    description="isomer-sessions",
+    author="Isomer Community",
+    author_email="riot@c-base.org",
+    url="https://github.com/isomeric/isomer-sessions",
+    license="GNU Affero General Public License v3",
+    packages=find_packages(),
+    long_description="""Isomer - Sessions
 =================
 
-This package adds session objects for management of lectures, lightning talks etc
+Session objects and management for lectures, lightning talks etc
 
 This software package is a plugin module for Isomer.
 """,
-      dependency_links=[],
-      install_requires=['isomer>=1.0.0'],
-      entry_points="""[isomer.components]
+    dependency_links=[],
+    install_requires=['isomer>=1.0.0'],
+    entry_points="""[isomer.components]
       sessionmanager=isomer.sessions.sessionmanager:SessionManager
       [isomer.schemata]
     session=isomer.sessions.session:Session
@@ -49,5 +50,5 @@ This software package is a plugin module for Isomer.
       [isomer.provisions]
     sessions=isomer.sessions.provisions.sessions_volume:provision
     """,
-      test_suite="tests.main.main",
-      )
+    test_suite="tests.main.main",
+)
