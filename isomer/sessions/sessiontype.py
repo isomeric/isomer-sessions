@@ -3,7 +3,7 @@
 
 # Isomer Application Framework
 # ============================
-# Copyright (C) 2011-2018 Heiko 'riot' Weinen <riot@c-base.org> and others.
+# Copyright (C) 2011-2019 Heiko 'riot' Weinen <riot@c-base.org> and others.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -40,12 +40,14 @@ from isomer.schemata.base import base_object
 SessionTypeSchema = base_object('sessiontype',
                                 roles_write=['chair'],
                                 roles_create=['chair'],
-                                roles_read= ['crew'],
+                                roles_read=['crew'],
                                 roles_list=['crew'])
 
 SessionTypeSchema['properties'].update({
-    'name': {'type': 'string', 'title': 'Title',
-             'description': 'Title of SessionType'},
+    'name': {
+        'type': 'string', 'title': 'Title',
+        'description': 'Title of SessionType'
+    },
     'open': {'type': 'boolean', 'title': 'Open', 'description': 'Allow SessionType type registration'},
     'length': {'type': 'number', 'title': 'Length', 'description': 'Duration of SessionType in minutes'},
 })

@@ -3,7 +3,7 @@
 
 # Isomer Application Framework
 # ============================
-# Copyright (C) 2011-2018 Heiko 'riot' Weinen <riot@c-base.org> and others.
+# Copyright (C) 2011-2019 Heiko 'riot' Weinen <riot@c-base.org> and others.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -45,15 +45,23 @@ SessionSchema = base_object('session',
 
 SessionSchema['properties'].update({
     'sessiontype': uuid_object('Session Type', 'Select a session type'),
-    'name': {'type': 'string', 'title': 'Title',
-             'description': 'Title of session'},
-    'abstract': {'type': 'string', 'title': 'Abstract',
-                 'format': 'html',
-                 'description': 'Abstract description'},
-    'keywords': {'type': 'string', 'title': 'Keywords',
-                 'description': 'Space or comma separated descriptive keywords'},
-    'topics': {'type': 'string', 'title': 'Topics',
-               'description': 'Space or comma separated list of session Topics'},
+    'name': {
+        'type': 'string', 'title': 'Title',
+        'description': 'Title of session'
+    },
+    'abstract': {
+        'type': 'string', 'title': 'Abstract',
+        'format': 'html',
+        'description': 'Abstract description'
+    },
+    'keywords': {
+        'type': 'string', 'title': 'Keywords',
+        'description': 'Space or comma separated descriptive keywords'
+    },
+    'topics': {
+        'type': 'string', 'title': 'Topics',
+        'description': 'Space or comma separated list of session Topics'
+    },
     'speakers': {
         'type': 'array',
         'title': 'Speakers',
