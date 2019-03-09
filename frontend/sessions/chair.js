@@ -211,7 +211,7 @@ class Sessions {
     set_drag_data(ev, dragEv, data) {
         console.log('[CHAIR] Setting Dragdata to:', data);
         data.dtstart = new Date();
-        data.dtend = new Date(new Date().getTime() + (data.duration*60000));
+        data.dtend = new Date(new Date().getTime() + (data.duration * 60000));
         this.dragdata = data;
     }
 

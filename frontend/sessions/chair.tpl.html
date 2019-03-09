@@ -122,7 +122,8 @@
                                       jqyoui-draggable="{zIndex: 1000000000,
                                                          onStart: '$ctrl.set_drag_data(event)'}"
                                       ng-model="$ctrl.dragdata">
-                                    {{event.name}} <span class="fa fa-times" ng-click="$ctrl.op.deleteObject('event', event.uuid); $ctrl.get_events()"></span>
+                                    {{event.name}} <span class="fa fa-times"
+                                                         ng-click="$ctrl.op.deleteObject('event', event.uuid); $ctrl.get_events()"></span>
                                 </span>
                             </li>
                         </ul>
@@ -148,7 +149,8 @@
                                                          onStart: '$ctrl.set_drag_data(event)'
                                                          duration: '00:05'}"
                                       ng-model="$ctrl.dragdata">
-                                    {{event.name}} <span class="fa fa-times" ng-click="$ctrl.op.deleteObject('event', event.uuid); $ctrl.get_events()"></span>
+                                    {{event.name}} <span class="fa fa-times"
+                                                         ng-click="$ctrl.op.deleteObject('event', event.uuid); $ctrl.get_events()"></span>
                                 </span>
                             </li>
                         </ul>
@@ -159,7 +161,8 @@
     </div>
 
     <!-- Vertical Resizer -->
-    <div id="vMiddleResizer" resizer="vertical" resizer-width="10" resizer-left="#leftmostpane" resizer-right="#middlepane"></div>
+    <div id="vMiddleResizer" resizer="vertical" resizer-width="10" resizer-left="#leftmostpane"
+         resizer-right="#middlepane"></div>
 
     <div id="middlepane" class="sidebar">
         <calendar></calendar>

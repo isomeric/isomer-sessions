@@ -27,7 +27,7 @@ import './sessions/sessions.scss';
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
-import { routing } from './sessions.config.js';
+import {routing} from './sessions.config.js';
 
 import sessionscomponent from './sessions/sessions';
 import sessionstemplate from './sessions/sessions.tpl.html';

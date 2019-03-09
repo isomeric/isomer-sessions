@@ -53,7 +53,7 @@ class Sessions {
             self.op.search('sessiontype', '*', '*').then(function (msg) {
                 if (typeof msg.data.list !== 'undefined') {
                     self.sessiontypes = {};
-                    for (let sessiontype of msg.data.list){
+                    for (let sessiontype of msg.data.list) {
                         self.sessiontypes[sessiontype.uuid] = sessiontype;
                     }
                 } else {
@@ -68,7 +68,7 @@ class Sessions {
             self.op.search('session', {owner: self.user.useruuid}, '*').then(function (msg) {
                 if (typeof msg.data.list !== 'undefined') {
                     self.sessions = {};
-                    for (let session of msg.data.list){
+                    for (let session of msg.data.list) {
                         // TODO: Get this from another chair-only-writable object
                         session.status = 'Undecided';
 
@@ -171,7 +171,9 @@ class Sessions {
     submitSession(no_show) {
         let model = this.model;
         let self = this;
-        if (this.editing !== true) { model.uuid = 'create'; }
+        if (this.editing !== true) {
+            model.uuid = 'create';
+        }
 
         console.log('[SESSIONS] Object update initiated with ', model);
         this.op.put('session', model).then(function (msg) {

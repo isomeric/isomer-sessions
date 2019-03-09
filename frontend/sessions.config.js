@@ -35,9 +35,9 @@ export function routing($stateProvider) {
             label: 'Sessions',
             icon: session_icon
         }).state('app.chair', {
-            url: '/chair',
-            template: '<chair></chair>',
-            label: 'Chair',
-            icon: chair_icon
-        });
+        url: '/chair',
+        template: '<chair></chair>',
+        label: 'Chair',
+        icon: chair_icon
+    });
 }
